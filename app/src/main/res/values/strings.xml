@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">BakingApp</string>
+
+    <string name="popular">Most Popular</string>
+    <string name="top">Highest Rated</string>
+    <string name="favorite">Favorite</string>
+
+    <string name="overview">Overview</string>
+    <string name="trailer">Trailer</string>
+    <string name="review">Review</string>
+
+    <string name="voice">Your Voice</string>
+
+    <string name="ingredients">Ingredients</string>
+    <string name="steps">Steps</string>
+
+    <string name="notfound">Recipe not found</string>
+
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+    <string name="appwidget_text">Recipe will appear after you add one of the recipes to widget</string>
+    <string name="add_widget">Add widget</string>
+
+    <string name="read_more">Read More ....</string>
+
+</resources>

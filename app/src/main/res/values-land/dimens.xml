@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="floating_search_margin">8dp</dimen>
+
+    <dimen name="image_recipe_detail_height">260dp</dimen>
+
+    <dimen name="exo_player_height">260dp</dimen>
+
+</resources>

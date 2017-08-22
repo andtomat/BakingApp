@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"/>
+
+    <com.arlib.floatingsearchview.FloatingSearchView
+        android:fitsSystemWindows="true"
+        android:id="@+id/fsv_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:floatingSearch_menu="@menu/menu_search_view"
+        app:floatingSearch_dismissOnOutsideTouch="true"
+        app:floatingSearch_leftActionMode="showSearch"
+        app:floatingSearch_searchBarMarginLeft="@dimen/floating_search_margin"
+        app:floatingSearch_searchBarMarginRight="@dimen/floating_search_margin"
+        app:floatingSearch_searchBarMarginTop="@dimen/floating_search_margin"
+        app:floatingSearch_searchHint="Search Recipe..."
+        app:floatingSearch_showSearchKey="true"
+        app:floatingSearch_suggestionsListAnimDuration="250"
+        app:floatingSearch_dimBackground="false"
+        app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
+
+    <ProgressBar
+        android:id="@+id/pb_recipes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_notfound"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="112dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/notfound"
+            android:textColor="@color/color_text"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</FrameLayout>

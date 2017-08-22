@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <color name="ripple">#33FFFFFF</color>
+
+    <color name="ripple_orange">#33FF9800</color>
+
+    <color name="grey">#EEEEEE</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="overlay">#80000000</color>
+
+    <color name="color_text">#757575</color>
+
+    <color name="theme_divider">#E0E0E0</color>
+
+</resources>
