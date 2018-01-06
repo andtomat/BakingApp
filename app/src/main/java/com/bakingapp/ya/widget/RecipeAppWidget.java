@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -22,6 +23,7 @@ import java.text.NumberFormat;
  */
 public class RecipeAppWidget extends AppWidgetProvider {
 
+    @SuppressWarnings("deprecation")
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 Recipe recipe, int appWidgetId) {
 
@@ -47,7 +49,11 @@ public class RecipeAppWidget extends AppWidgetProvider {
 
                 NumberFormat format = new DecimalFormat("0.#");
                 String text = format.format(ingredient.getQuantity()) + " " + ingredient.getMeasure() + "  <b>" + ingredient.getIngredient() + "</b>";
-                rvIngredient.setTextViewText(R.id.tv_recipe_widget_ingredient_item, Html.fromHtml(text));
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    rvIngredient.setTextViewText(R.id.tv_recipe_widget_ingredient_item, Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
+                } else {
+                    rvIngredient.setTextViewText(R.id.tv_recipe_widget_ingredient_item, Html.fromHtml(text));
+                }
                 views.addView(R.id.ll_recipe_widget_ingredient_list, rvIngredient);
             }
             i++;

@@ -29,7 +29,7 @@ public class RecipeAppWidgetService extends IntentService {
             final String action = intent.getAction();
             if (RECIPE_WIDGET_ACTION_UPDATE.equals(action) &&
                     intent.getParcelableExtra("recipe") != null) {
-                handleActionUpdateWidgets((Recipe)intent.getParcelableExtra("recipe"));
+                handleActionUpdateWidgets(intent.getParcelableExtra("recipe"));
             }
         }
     }
